@@ -1,10 +1,10 @@
 import java.io.*;
-
-public class access_spec extends access_spec_2 {
+import pkg.access_spec_2;
+public class access_spec{
     public static void main(String[] args){
         access_spec_2.pub();
         System.out.println("\n");
-        access_spec.prtcd();
+        // access_spec_2.prtcd();
 
     }
 }
