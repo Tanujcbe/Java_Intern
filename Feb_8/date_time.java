@@ -21,6 +21,6 @@ public class date_time {
         System.out.println("Time in milliseconds: " + milliseconds);
 
         ZoneId singaporeId = ZoneId.of("Asia/Singapore");
-        System.out.println("Singapre Zone ID : "+ldt.atZone(singaporeId));
+        System.out.println("Singapre Zone ID : "+ldt.atZone(singaporeId).format(dtf));
     }
 }
