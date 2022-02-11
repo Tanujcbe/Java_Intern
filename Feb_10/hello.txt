@@ -1,1 +1,53 @@
-ALTER TABLE "table_name" RENAME COLUMN "column 1" TO "column 2";
+
+CREATE TABLE EMPLOYEE (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  dept TEXT NOT NULL,
+  age INTEGER NOT NULL
+);
+
+INSERT INTO EMPLOYEE VALUES (1, 'Tanuj', 'Developer',21);
+INSERT INTO EMPLOYEE VALUES (2, 'Himan', 'Security',22);
+INSERT INTO EMPLOYEE VALUES (3, 'Ram', 'Animation',25);
+INSERT INTO EMPLOYEE VALUES (4, 'Azeem', 'Staff',27);
+
+SELECT * FROM EMPLOYEE;
+
+update EMPLOYEE set age = 35 where empId=3;
+
+SELECT * FROM EMPLOYEE;
+
+alter table EMPLOYEE drop column age;
+
+SELECT * FROM EMPLOYEE;
+
+ALTER TABLE EMPLOYEE RENAME COLUMN dept TO department;
+
+delete from EMPLOYEE  where Empid =3;
+
+SELECT * FROM EMPLOYEE;
+
+
+////OUTPUT////
+empId	name	dept	age
+1	Tanuj	Developer	21
+2	Himan	Security	22
+3	Ram	Animation	25
+4	Azeem	Staff	
+
+empId	name	dept	age
+1	Tanuj	Developer	21
+2	Himan	Security	22
+3	Ram	Animation	35
+4	Azeem	Staff	27
+
+empId	name	dept
+1	Tanuj	Developer
+2	Himan	Security
+3	Ram	Animation
+4	Azeem	Staff
+
+empId	name	department
+1	Tanuj	Developer
+2	Himan	Security
+4	Azeem	Staff
