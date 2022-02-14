@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Handlebars  2</title>
+  <script src="handlebars-v4.7.7.js"></script>
+</head>
+<body>
+
+  <div id="quoteData"></div>
+  
+  <script id="quote-template" type="text/x-handlebars-template">
+
+    <h3>{{first_line}}</h3>
+    <ol>
+    {{#each quotes}}
+        <li>{{quote}}</li>
+    {{/each}}
+    </ol>
+    <h5>{{{by_line}}}</h5>
+  </script>
+
+  <script type="text/javascript">
+
+  var quoteInfo = document.getElementById("quote-template").innerHTML;
+
+  var template = Handlebars.compile(quoteInfo);
+
+  var quoteData = template({
+    first_line: "My Favorite Quotes ",
+    quotes: [
+      {quote: "The purpose of our lives is to be happy.."},
+      {quote: "Life is what happens when you’re busy making other plans.."},
+      {quote: "You only live once, but if you do it right, once is enough."},
+      {quote: "Many of life’s failures are people who did not realize how close they were to success when they gave up."}
+    ],
+
+    by_line:'<i>- Tanuj</i>'
+    
+  });
+
+  document.getElementById('quoteData').innerHTML += quoteData;
+
+  </script>
+
+</body>
+</html>
